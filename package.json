@@ -1,0 +1,7 @@
+{
+  "name": "modal_window_with_datepicker",
+  "version": "1.0.0",
+  "dependencies": {
+    "js-datepicker": "^5.18.0"
+  }
+}
