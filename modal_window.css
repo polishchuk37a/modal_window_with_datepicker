@@ -10,6 +10,11 @@
   font-size: 20px;
 }
 
+.modal_window_btn:hover {
+  background: #4777c4;
+  cursor: pointer;
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -26,15 +31,15 @@
 .modal-content {
   border-radius: 15px;
   background-color: #fefefe;
-  margin: 10% auto;
   padding: 20px;
   border: 1px solid #888;
   width: 800px;
   height: 500px;
+  margin: 15% auto;
 }
 
 .close {
-  color: #aaa;
+  color: #0077ff;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -42,7 +47,7 @@
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: #bdd8f0;
   text-decoration: none;
   cursor: pointer;
 }
@@ -65,10 +70,40 @@
 }
 
 .dp-input {
-  width: 250px;
-  height: 30px;
-  border-radius: 5px;
+  width: 240px;
+  height: 50px;
+  border-radius: 10px;
   outline: none;
+  background: #0077ff;
+  border-color: white;
+  color: white;
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+.dp-input::placeholder {
+  color: white;
+}
+
+.select_block {
+  width: 100%;
+  margin-top: 10px;
+}
+.select_block .select {
+  display: none;
+  width: 250px;
+  height: 50px;
+  margin: 0 auto;
+  background: #bdd8f0;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  padding-left: 10px;
+  outline: none;
+}
+.select_block .select option {
+  width: 200px;
+  font-size: 20px;
 }
 
 /*# sourceMappingURL=modal_window.css.map */

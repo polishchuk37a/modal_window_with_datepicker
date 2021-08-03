@@ -1,6 +1,8 @@
 let modal = document.getElementById("myModal");
 let btn = document.querySelector(".modal_window_btn");
 let span = document.querySelector(".close");
+let select1 = document.querySelector(".select");
+let input1 = document.querySelector('.dp-input');
 
 // When the user clicks on the button, open the modal
 btn.addEventListener ('click',()=>{
@@ -20,5 +22,7 @@ window.onclick = function(event) {
 }
 
 const picker = datepicker('.dp-input', {
-    customMonths: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+    onSelect: (instance, date) => {
+       select1.style.display = "block";
+    }
 })
