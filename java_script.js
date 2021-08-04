@@ -1,24 +1,63 @@
 let modal = document.getElementById("myModal");
 let btn = document.querySelector(".modal_window_btn");
 let span = document.querySelector(".close");
+let select1 = document.querySelector(".select");
+let input1 = document.querySelector('.dp-input');
+let selectedDate = document.querySelector('.selected_date');
+let selectedValue = document.querySelector('.selected_value');
+let dataBlock = document.querySelector('.selected_data_block');
+let message = document.querySelector('.message');
 
-// When the user clicks on the button, open the modal
 btn.addEventListener ('click',()=>{
     modal.style.display = "block";
 })
 
-// When the user clicks on <span> (x), close the modal
 span.addEventListener('click', ()=>{
-    modal.style.display = "none";
+   validDate();
+   push();
 })
 
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
-        modal.style.display = "none";
+        validDate();
+        push();
     }
 }
 
 const picker = datepicker('.dp-input', {
-    customMonths: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+    onSelect: (instance, date) => {
+       select1.style.display = "block";
+    }
 })
+
+select1.addEventListener('change', () => {
+    if(select1.value == 'first' || select1.value == 'second' || select1.value == 'fifth'){
+        push();
+        modal.style.display = "none";
+        dataBlock.style.display = "block";
+    }
+});
+
+function push() {
+    let valueDate = input1.value;
+    selectedDate.value = valueDate;
+    let valueSelect = select1.value;
+    selectedValue.value = valueSelect;
+}
+
+function validDate(){
+    if(input1.value != ""){
+        modal.style.display = "none";
+        message.style.display = "none";
+        dataBlock.style.display = "block";
+    } else{
+        message.style.display = "block";
+    }
+}
+
+
+
+
+
+
+

@@ -1,13 +1,53 @@
 .modal_window_btn{
   margin-top: 10px;
   margin-left: 10px;
-  width: 200px;
+  width: 300px;
   height: 50px;
   border-radius: 10px;
   border: none;
-  background: #0077ff;
-  color: white;
+  background: #a8aab5;
+  color: black;
   font-size: 20px;
+  font-family: Roboto, sans-serif;
+}
+
+.selected_data_block{
+  display: none;
+  margin-left: 10px;
+  margin-top: 20px;
+  width: 300px;
+  height: 130px;
+  border-radius: 7px;
+  background: #e6e7ed;
+  font-family: Roboto, sans-serif;
+  h1{
+    padding-top: 10px;
+    padding-left: 5px;
+    font-size: 20px;
+    color: black;
+    font-weight: 100;
+  }
+  .date_block{
+    display: flex;
+  }
+  .selected_block{
+    display: flex;
+  }
+  input{
+    outline: none;
+    border: none;
+    background: #e6e7ed;
+    margin-top: 25px;
+    margin-left: 10px;
+    width: 120px;
+    height: 20px;
+    font-size: 15px;
+  }
+}
+
+.modal_window_btn:hover{
+  background: #7e808f;
+  cursor: pointer;
 }
 
 .modal {
@@ -26,15 +66,15 @@
 .modal-content {
   border-radius: 15px;
   background-color: #fefefe;
-  margin: 10% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 800px;
-  height: 500px;
+  width: 300px;
+  height: 300px;
+  margin: 10% auto;
 }
 
 .close {
-  color: #aaa;
+  color: #a8aab5;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -49,7 +89,7 @@
 
 .modal-header{
   width: 100%;
-  height: 100px;
+  height: 40px;
 }
 
 .modal-body{
@@ -65,9 +105,56 @@
 }
 
 .dp-input{
-  width: 250px;
-  height: 30px;
-  border-radius: 5px;
+  width: 240px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
   outline: none;
-
+  background: #a8aab5;
+  color: black;
+  font-size: 20px;
+  padding-left: 10px;
 }
+
+.dp-input::placeholder{
+  color: black;
+  opacity: 0.5;
+}
+
+.select_block{
+  width: 100%;
+  margin-top: 10px;
+  .select{
+    display: none;
+    width: 250px;
+    height: 50px;
+    margin: 0 auto;
+    background: #cdced4;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    padding-left: 10px;
+    outline: none;
+    option{
+      width: 200px;
+      font-size: 20px;
+    }
+  }
+}
+
+.message_block{
+  width: 100%;
+  text-align: center;
+}
+
+.message{
+  display: none;
+  font-family: Roboto, sans-serif;
+  font-size: 15px;
+  color: red;
+  opacity: 0.7;
+}
+
+
+
+
